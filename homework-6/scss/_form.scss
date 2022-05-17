@@ -1,0 +1,192 @@
+.form {
+    width: 800px;
+    box-sizing: border-box;
+    @include style-outside;
+    border-radius: 20px;
+    padding: 26px 45px;
+    margin: 0 auto;
+    animation: 1s form ease;
+    animation-iteration-count: 1;
+    animation-fill-mode:both;
+    
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 50px;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    &__control {
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+        margin: 13px 0;
+    }
+    
+    &__label {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        margin-left: 8px;
+    }
+
+    &__input {
+        max-height: 49px;
+        padding: 4.5px 15px;
+        outline: none;
+        @include style-inside;
+        border: none;
+        border-radius: 10px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+        color: #D6E1EF;
+
+        &::placeholder {
+            color: #D6E1EF;
+        }
+
+        &:focus{
+            @include style-outside;
+            animation: 0.8s form ease;
+            animation-iteration-count: 1;
+            animation-fill-mode:both;
+        }
+
+        &--text {
+            padding: 15px;
+            min-height: 180px;
+            display: flex;
+            align-items: flex-start;
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+
+    &__button-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 52px;
+    }
+}
+
+.button {
+    padding: 20px 50px;
+    @include style-outside;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 16px;
+    border: none;
+
+    &:active {
+        color: silver;
+        @include style-inside;
+    }
+}
+
+
+.radio {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+
+    &__title {
+        margin: 0 0 20px 0;
+    }
+
+    &__choice-box {
+        position: relative;
+        margin: 3px 0;
+    }
+
+    &__input {
+        opacity: 0%;
+        width: 15px;
+        height: 15px;
+        box-sizing: border-box;
+        z-index: 3;
+
+        &:checked + .radio__mark {
+            background-color: #505962;
+            border: 3px solid white;
+            width: 17px;
+            height: 17px;
+        }
+    }
+
+    &__mark {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        box-sizing: border-box;
+        background-color: #D6E1EF;
+        left: 4px;
+        top: 2px;
+        border-radius: 50%;
+        z-index: -1;
+    }
+}
+
+.checkbox {
+    position: relative;
+    margin-top: 16px;
+
+    &__input {
+        width: 25px;
+        height: 25px;
+        opacity: 0%;
+        position: relative;
+        z-index: 10;
+        margin: 0;
+
+        &:checked + .checkbox__mark {
+            background: url(../image/checkbox.svg) no-repeat center center;
+            background-size: 130%;
+            animation: 0.6s form ease;
+            background-color: #D6E1EF;
+            animation-iteration-count: 1;
+            animation-fill-mode:both;
+        }
+    }
+
+    &__label {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 30px;
+        margin-left: 10px;
+    }
+
+    &__mark {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-color: #D6E1EF;
+        left: 0;
+        border-radius: 7px;
+    }
+}
+
+
+
+.link {
+
+    &--form {
+
+        a {
+            color: aqua;
+
+            &:hover::before {
+                background-color: aqua;
+            }
+        }
+    }
+}

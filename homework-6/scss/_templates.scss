@@ -1,0 +1,57 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: #505962;
+    color: #D6E1EF;
+    padding: 15px 0;
+    animation: 1s loading ease;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.link {
+    line-height: 25px;
+    font-size: 15px;
+    a {
+        color: #D6E1EF;
+        position: relative;
+
+        &:hover::before {
+            content: '';
+            width: 100%;
+            height: 1px;                
+            background: #D6E1EF;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+@mixin style-outside {
+    background-color: #505962;
+    box-shadow:  5px 5px 9px #485058, -5px -5px 9px #58626c;
+}
+
+@mixin style-inside {
+    background-color: #505962;
+    box-shadow: inset 5px 5px 9px #485058, inset -5px -5px 9px #58626c;
+}
+
+@keyframes star-animation {
+    0% {top: 20%;}
+    50% {top: 16%;}
+    100% {top: 20;}
+}
+
+@keyframes loading {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+@keyframes form {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}

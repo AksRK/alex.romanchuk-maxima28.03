@@ -1,0 +1,48 @@
+.footer {
+    color: #D6E1EF;
+
+    &__wrapper {
+        box-sizing: border-box;
+        padding: 15px;
+        @include style-outside;
+        width: 100%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 40px;
+
+    }
+
+    &__logo {
+        min-width: 280px;
+        padding: 15px 25px;
+        box-sizing: border-box;
+        @include style-outside;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+        flex: 1;
+
+        img {
+            width: 150px;
+        }
+    }
+}
+
+.footer-links {
+    min-width: 280px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    @include style-inside;
+    flex: 1;
+
+    h3 {
+        margin: 0;
+        font-size: 25px;
+    }
+}
