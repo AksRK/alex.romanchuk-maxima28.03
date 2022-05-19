@@ -17,6 +17,7 @@
         display: flex;
         justify-content: center;
         margin: 20px 0;
+        color: $secondaryDark;
     }
 
     &__control {
@@ -45,14 +46,15 @@
         font-weight: 700;
         font-size: 28px;
         line-height: 36px;
-        color: #D6E1EF;
+        color: $secondaryDark;
 
         &::placeholder {
-            color: #D6E1EF;
+            color: $primary-light;
         }
 
         &:focus{
             @include style-outside;
+            color: $secondaryDark;
             animation: 0.8s form ease;
             animation-iteration-count: 1;
             animation-fill-mode:both;
@@ -73,30 +75,17 @@
         justify-content: center;
         margin-top: 52px;
     }
-}
 
-.button {
-    padding: 20px 50px;
-    @include style-outside;
-    color: #FFFFFF;
-    border-radius: 10px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 16px;
-    border: none;
-
-    &:active {
-        color: silver;
-        @include style-inside;
+    &--button {
+        padding: 15px 60px;
     }
 }
-
 
 .radio {
     display: flex;
     flex-direction: column;
     padding: 15px 0;
+    color: $secondary-3;
 
     &__title {
         margin: 0 0 20px 0;
@@ -105,43 +94,52 @@
     &__choice-box {
         position: relative;
         margin: 3px 0;
+        display: flex;
+        align-items: center;
     }
 
     &__input {
         opacity: 0%;
-        width: 15px;
-        height: 15px;
+        width: 25px;
+        height: 25px;
         box-sizing: border-box;
         z-index: 3;
 
         &:checked + .radio__mark {
-            background-color: #505962;
-            border: 3px solid white;
-            width: 17px;
-            height: 17px;
+            background-color: $primary-dark;
+            border: 7px solid $secondary-1;
+        }
+
+        &:hover + .radio__mark {
+            background-color: $primary-dark;
         }
     }
 
     &__mark {
         position: absolute;
-        width: 17px;
-        height: 17px;
+        width: 27px;
+        height: 27px;
         box-sizing: border-box;
-        background-color: #D6E1EF;
+        // background-color: #D6E1EF;
+        @include style-outside;
+        background-color: $secondary-3;
+        border: 7px solid $secondary-1;
         left: 4px;
         top: 2px;
         border-radius: 50%;
         z-index: -1;
+        transition: 0.5s;
     }
 }
 
 .checkbox {
     position: relative;
     margin-top: 16px;
+    color: $secondary-3;
 
     &__input {
-        width: 25px;
-        height: 25px;
+        width: 27px;
+        height: 27px;
         opacity: 0%;
         position: relative;
         z-index: 10;
@@ -151,7 +149,7 @@
             background: url(../image/checkbox.svg) no-repeat center center;
             background-size: 130%;
             animation: 0.6s form ease;
-            background-color: #D6E1EF;
+            @include style-inside;
             animation-iteration-count: 1;
             animation-fill-mode:both;
         }
@@ -167,25 +165,27 @@
 
     &__mark {
         position: absolute;
-        width: 24px;
-        height: 24px;
-        background-color: #D6E1EF;
+        width: 27px;
+        height: 27px;
+        @include style-outside;
         left: 0;
         border-radius: 7px;
     }
 }
-
-
 
 .link {
 
     &--form {
 
         a {
-            color: aqua;
+            color: $primary;
 
-            &:hover::before {
-                background-color: aqua;
+            &:hover {
+                color: $primary-light;
+
+                &::before {
+                    background: $primary-light;
+                }
             }
         }
     }

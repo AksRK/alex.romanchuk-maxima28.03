@@ -1,7 +1,7 @@
 body {
     font-family: 'Inter', sans-serif;
-    background: #505962;
-    color: #D6E1EF;
+    background: $secondary-1;
+    color: $secondary-2;
     padding: 15px 0;
     animation: 1s loading ease;
 }
@@ -16,28 +16,42 @@ body {
     line-height: 25px;
     font-size: 15px;
     a {
-        color: #D6E1EF;
+        color: $secondaryDark;
         position: relative;
 
         &:hover::before {
             content: '';
             width: 100%;
             height: 1px;                
-            background: #D6E1EF;
+            background: $primary;
             position: absolute;
             bottom: 0;
         }
     }
 }
 
-@mixin style-outside {
-    background-color: #505962;
-    box-shadow:  5px 5px 9px #485058, -5px -5px 9px #58626c;
-}
+.button {
+    box-sizing: border-box;
+    padding: 6px 25px;
+    font-size: 25px;
+    border-radius: 15px;
+    border: none;
+    color: $secondaryDark;
+    @include style-outside;
+    transition: 0.5s;
 
-@mixin style-inside {
-    background-color: #505962;
-    box-shadow: inset 5px 5px 9px #485058, inset -5px -5px 9px #58626c;
+    &:hover {
+        background: $primary-light;
+        color: $white;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    &:active {
+        @include style-inside;
+        color: $secondaryDark;
+        transition: 0.1s;
+    }
 }
 
 @keyframes star-animation {

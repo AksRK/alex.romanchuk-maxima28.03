@@ -7,7 +7,6 @@
         max-height: 900px;
         border-radius: 15px;
         box-sizing: border-box;
-        padding: 15px;
         @include style-inside;
         display: flex;
         align-items: flex-start;
@@ -41,8 +40,8 @@
     }
 
     &__title {
-        margin: 0;
-        color: white;
+        margin: 20px;
+        color: $secondaryDark;
         font-size: 90px;
         z-index: 3;
     }

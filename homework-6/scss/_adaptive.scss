@@ -17,8 +17,7 @@
     }
 
     .main__wrapper {
-        justify-content: space-around;
-        gap: 40px 20px;
+        gap: 40px 0px;
         padding: 0 15px;
     }
 
@@ -50,6 +49,21 @@
 
         }
     }
+    .main {
+
+        &__wrapper {
+            padding: 0 20px;
+            gap: 20px 0;
+        }
+    }
+
+    .card {
+        flex: 0 0 45%;
+
+        &:hover {
+            transform: none;
+        }
+    }
 
     .form {
         width: 100%;
@@ -58,5 +72,15 @@
 
     .footer__logo {
         margin: 0;
+    }
+}
+
+@media (max-width:375px) {
+    .card {
+        flex: 0 0 100%;
+    }
+
+    .banner__title {
+        margin: 20px auto;
     }
 }

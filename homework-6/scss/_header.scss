@@ -3,7 +3,7 @@
     animation: 2s loading ease;
     animation-iteration-count: 1;
     animation-fill-mode:both;
-    color: #D6E1EF;
+    color: $secondaryDark;
 
     &__wrapper {
         @include style-outside;
