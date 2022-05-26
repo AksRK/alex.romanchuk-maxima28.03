@@ -6,13 +6,12 @@ const signInput = document.getElementById('sign');
 const buttonСount = document.getElementById('count');
 const buttonReset = document.getElementById('reset');
 const resultOutput = document.getElementById('result');
-const eror = document.querySelector('.eror');
 const sysMsg = document.querySelector('.sys-msg');
 
 buttonСount.addEventListener('click', () => {
-    let value1 = input1.value;
-    let value2 = input2.value;
-    let sign = signInput.value;
+    const value1 = input1.value;
+    const value2 = input2.value;
+    const sign = signInput.value;
     let result = 0;  
 
     function resultText(x){
@@ -20,31 +19,31 @@ buttonСount.addEventListener('click', () => {
         sysMsg.textContent = x;
     }
 
-    if (value1 == ''){
+    if (value1 === ''){
         sysMsg.textContent = 'Первое число не указано';
     }else if (isNaN(value1)){
         sysMsg.textContent = 'Некорректный ввод чисел';
-    }else if (value2 == ''){
+    }else if (value2 === ''){
         sysMsg.textContent = 'Второе число не указано';
     }else if (isNaN(value2)){
         sysMsg.textContent = 'Некорректный ввод чисел';
     }else {
-        if(sign == '') {
+        if(sign === '') {
             sysMsg.textContent = 'Необходимо указать операцию +|-|*|/';
-        }else if(sign == '-') {
+        }else if(sign === '-') {
             result = +value1 - +value2;
             resultText('Произведите вычисления');
-        }else if(sign == '/') {
-            if (value2 == '0'){
+        }else if(sign === '/') {
+            if (value2 === '0'){
                 sysMsg.textContent = 'Деление на ноль не определено';
             }else{
                 result = +value1 / +value2;
                 resultText('Произведите вычисления');
             }
-        }else if(sign == '*') {
+        }else if(sign === '*') {
             result = +value1 * +value2;
             resultText('Произведите вычисления');
-        }else if (sign == '+'){
+        }else if (sign === '+'){
             result = +value1 + +value2;
             resultText('Произведите вычисления');
         }else {
