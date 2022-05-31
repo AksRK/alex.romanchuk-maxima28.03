@@ -9,10 +9,10 @@ const resultOutput = document.getElementById('result');
 const sysMsg = document.querySelector('.sys-msg');
 
 buttonСount.addEventListener('click', () => {
-    const value1 = input1.value;
-    const value2 = input2.value;
-    const sign = signInput.value;
-    let result = 0;  
+    const value1 = input1.value.trim();
+    const value2 = input2.value.trim();
+    const sign = signInput.value.trim();
+    let result = 0;
 
     function resultText(x){
         resultOutput.value = result;
