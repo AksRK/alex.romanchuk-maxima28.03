@@ -1,10 +1,19 @@
-'use scrict';
+'use strict';
 
 const fibonacci = function() {
-    var arr = [1,1,2];
+    var arr = [];
 
     return function () {
-        arr.push(arr.at(-1) + arr.at(-2));
-        return arr.at(-1);
-    }
+        if (arr.length <= 1) {
+            arr.push(1);
+            return arr.at(-1);
+        }else {
+            arr.push(arr.at(-1) + arr.at(-2));
+            arr.shift();
+            return arr.at(-1);
+        };
+    };
 }();
+
+
+
