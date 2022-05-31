@@ -12,7 +12,7 @@ buttonСount.addEventListener('click', () => {
     const value1 = input1.value.trim();
     const value2 = input2.value.trim();
     const sign = signInput.value.trim();
-    let result = 0;
+    let result;
 
     function resultText(x){
         resultOutput.value = result;
