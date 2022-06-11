@@ -22,7 +22,7 @@ const obj = {
 
 function printNodes(obj, lvl = 0) {
     const arr = Object.entries(obj);
-    console.log(' '.repeat(lvl), '{');
+    console.log(`${' '.repeat(lvl)} {`);
     
     for (let i of arr){
         let lv = lvl;
@@ -35,7 +35,7 @@ function printNodes(obj, lvl = 0) {
         }
     }
 
-    console.log(' '.repeat(lvl), '}');
+    console.log(`${' '.repeat(lvl)} }`);
 };
 
 printNodes(obj);
