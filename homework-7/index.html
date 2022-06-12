@@ -10,14 +10,19 @@
 <body>
     <div class="calc">
         <div class="sys-msg">Произведите вычисления</div>
-        <input id="input1" type="text" placeholder="Первое число">
-        <input id="input2" type="text" placeholder="Второе число">
-        <input id="sign" type="text" placeholder="Укажите операцию">
+        <label for="input1">Первое число</label>
+        <input id="input1" type="text">
+        <label for="input2">Второе число</label>
+        <input id="input2" type="text">
+        <label for="sign">Укажите операцию</label>
+        <input id="sign" type="text">
         <div class="calc__button-container">
-            <button id="count">Посчитать</button>
-            <button id="reset">Очистить</button>
+            <button id="count" class="button button--brdr-left">Посчитать</button>
+            <button id="reset" class="button button--brdr-right">Очистить</button>
         </div>        
-        <input id="result" type="text" placeholder="Результат">
+        <div class="result__wrapper">
+            <div class="result__display">0</div>
+        </div>
     </div>
     <script src="./calc.js"></script>
 </body>
