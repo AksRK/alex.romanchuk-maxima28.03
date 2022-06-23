@@ -21,21 +21,21 @@ buttonСount.addEventListener('click', () => {
 
     if (value1 === ''){
         sysMsg.textContent = 'Первое число не указано';
-        resultOutput.textContent = '0';
+        resultOutput.textContent = '';
     }else if (isNaN(value1)){
         sysMsg.textContent = 'Некорректный ввод чисел';
-        resultOutput.textContent = '0';
+        resultOutput.textContent = '';
     }else if (value2 === ''){
         sysMsg.textContent = 'Второе число не указано';
-        resultOutput.textContent = '0';
+        resultOutput.textContent = '';
     }else if (isNaN(value2)){
         sysMsg.textContent = 'Некорректный ввод чисел';
-        resultOutput.textContent = '0';
+        resultOutput.textContent = '';
     }else {
         switch (sign) {
             case '': 
                 sysMsg.textContent = 'Необходимо указать операцию +|-|*|/';
-                resultOutput.textContent = '0';
+                resultOutput.textContent = '';
                 break;
             case '-': 
                 result = +value1 - +value2;
@@ -52,7 +52,7 @@ buttonСount.addEventListener('click', () => {
             case '/': 
                 if (value2 === '0' || value2 === '-0') {
                     sysMsg.textContent = 'Деление на ноль не определено';
-                    resultOutput.textContent = '0';
+                    resultOutput.textContent = '';
                     break;
                 }else{
                     result = +value1 / +value2;
@@ -61,7 +61,7 @@ buttonСount.addEventListener('click', () => {
                 }
             default:
                 sysMsg.textContent = 'Программа не поддерживает такую операцию';
-                resultOutput.textContent = '0';
+                resultOutput.textContent = '';
                 break;
         }
     };
@@ -75,6 +75,6 @@ buttonReset.addEventListener('click', () => {
     input1.value = '';
     input2.value = '';
     signInput.value = '';
-    resultOutput.textContent = '0';
+    resultOutput.textContent = '';
     sysMsg.textContent = 'Произведите вычисления';
 });

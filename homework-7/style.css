@@ -95,4 +95,5 @@ body {
 .result__display {
     cursor: pointer;
     font-weight: 600;
+    min-height: 19px;
 }
